@@ -9,6 +9,27 @@
 import UIKit
 
 extension ViewController {
+    
+    //Edit Btn
+    override func setEditing(editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+        if editing {
+            tableView.setEditing(true, animated: false)
+        } else {
+            tableView.setEditing(false, animated: false)
+        }
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let bugSection = bugSect[indexPath.section]
+            bugSection.bugs.removeAtIndex(indexPath.row)
+            //Without animation:
+            //tableView.reloadData()
+            //With animation:
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return bugSect.count

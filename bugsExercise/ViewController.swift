@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.rightBarButtonItem = editButtonItem()
         setupBugs()
     }
 
@@ -25,7 +26,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         let averageScarySection = BugSection(factor: .AverageScary)
         let quiteScarySection = BugSection(factor: .QuiteScary)
         let aiiiiieeeeeSection = BugSection(factor: .Aiiiiieeeee)
-                
+        
         bugSect.append(notScarySection)
         bugSect.append(aLittleScarySection)
         bugSect.append(averageScarySection)
