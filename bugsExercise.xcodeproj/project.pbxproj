@@ -12,6 +12,9 @@
 		E04200D41D439FE3001CD24A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04200D21D439FE3001CD24A /* Main.storyboard */; };
 		E04200D61D439FE3001CD24A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04200D51D439FE3001CD24A /* Assets.xcassets */; };
 		E04200D91D439FE3001CD24A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04200D71D439FE3001CD24A /* LaunchScreen.storyboard */; };
+		E04200E31D43A0CF001CD24A /* ScaryBug.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04200E21D43A0CF001CD24A /* ScaryBug.swift */; };
+		E04200E91D43A193001CD24A /* ViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04200E81D43A193001CD24A /* ViewController+TableView.swift */; };
+		E08B8FA61D44C6FF00762F71 /* BugSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B8FA51D44C6FF00762F71 /* BugSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		E04200D51D439FE3001CD24A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04200D81D439FE3001CD24A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04200DA1D439FE3001CD24A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04200E21D43A0CF001CD24A /* ScaryBug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaryBug.swift; sourceTree = "<group>"; };
+		E04200E81D43A193001CD24A /* ViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+TableView.swift"; sourceTree = "<group>"; };
+		E08B8FA51D44C6FF00762F71 /* BugSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BugSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		E04200CD1D439FE3001CD24A /* bugsExercise */ = {
 			isa = PBXGroup;
 			children = (
-				E04200CE1D439FE3001CD24A /* AppDelegate.swift */,
-				E04200D01D439FE3001CD24A /* ViewController.swift */,
-				E04200D21D439FE3001CD24A /* Main.storyboard */,
+				E04200E61D43A167001CD24A /* Controller */,
+				E04200E51D43A163001CD24A /* View */,
+				E04200E41D43A0D8001CD24A /* Model */,
 				E04200D51D439FE3001CD24A /* Assets.xcassets */,
-				E04200D71D439FE3001CD24A /* LaunchScreen.storyboard */,
-				E04200DA1D439FE3001CD24A /* Info.plist */,
+				E04200E71D43A16C001CD24A /* Support Files */,
 			);
 			path = bugsExercise;
+			sourceTree = "<group>";
+		};
+		E04200E41D43A0D8001CD24A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E04200E21D43A0CF001CD24A /* ScaryBug.swift */,
+				E08B8FA51D44C6FF00762F71 /* BugSection.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E04200E51D43A163001CD24A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E04200D21D439FE3001CD24A /* Main.storyboard */,
+				E04200D71D439FE3001CD24A /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E04200E61D43A167001CD24A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E04200CE1D439FE3001CD24A /* AppDelegate.swift */,
+				E04200D01D439FE3001CD24A /* ViewController.swift */,
+				E04200E81D43A193001CD24A /* ViewController+TableView.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E04200E71D43A16C001CD24A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E04200DA1D439FE3001CD24A /* Info.plist */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +178,9 @@
 			files = (
 				E04200D11D439FE3001CD24A /* ViewController.swift in Sources */,
 				E04200CF1D439FE3001CD24A /* AppDelegate.swift in Sources */,
+				E08B8FA61D44C6FF00762F71 /* BugSection.swift in Sources */,
+				E04200E91D43A193001CD24A /* ViewController+TableView.swift in Sources */,
+				E04200E31D43A0CF001CD24A /* ScaryBug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +330,7 @@
 				E04200DF1D439FE3001CD24A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

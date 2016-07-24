@@ -8,17 +8,39 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource {
+    
+    var bugSect = [BugSection]()
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        setupBugs()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func setupBugs() {
+        let notScarySection = BugSection(factor: .NotScary)
+        let aLittleScarySection = BugSection(factor: .ALittleScary)
+        let averageScarySection = BugSection(factor: .AverageScary)
+        let quiteScarySection = BugSection(factor: .QuiteScary)
+        let aiiiiieeeeeSection = BugSection(factor: .Aiiiiieeeee)
+                
+        bugSect.append(notScarySection)
+        bugSect.append(aLittleScarySection)
+        bugSect.append(averageScarySection)
+        bugSect.append(quiteScarySection)
+        bugSect.append(aiiiiieeeeeSection)
+        
+        let bugs = ScaryBug.bugs()
+        
+        for bug in bugs {
+            let bugSection = bugSect[bug.howScary.rawValue]
+            bugSection.bugs.append(bug)
+        }
+        
     }
+    
 
 
 }
