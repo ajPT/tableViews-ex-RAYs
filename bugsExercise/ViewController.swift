@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController {
     
     var bugSect = [BugSection]()
     
@@ -17,6 +17,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = editButtonItem()
+        tableView.allowsSelectionDuringEditing = true
         setupBugs()
     }
 
